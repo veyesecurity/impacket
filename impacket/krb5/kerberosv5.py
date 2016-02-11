@@ -120,7 +120,7 @@ def getKerberosTGT(clientName, password, domain, lmhash, nthash, aesKey='', kdcH
             else:
                 supportedCiphers = (int(constants.EncryptionTypes.aes128_cts_hmac_sha1_96.value),)
         else:
-            supportedCiphers = (int(constants.EncryptionTypes.aes256_cts_hmac_sha1_96.value),)
+            supportedCiphers = (int(constants.EncryptionTypes.aes128_cts_hmac_sha1_96.value),)
     else:
         # We have hashes to try, only way is to request RC4 only
         supportedCiphers = (int(constants.EncryptionTypes.rc4_hmac.value),)
